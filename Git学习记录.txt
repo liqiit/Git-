@@ -39,20 +39,27 @@ Svn和Git的差别：
 									  %cd 提交日期
 									  %cr 提交日期，按多久以前的方式显示
 									  %s 提交说明
-						选项 --shortstat 只显示 --stat 中最后的行数修改添加移除统计。
+						选项    --shortstat 只显示 --stat 中最后的行数修改添加移除统计。
 						选项	--name-only 仅在提交信息后显示已修改的文件清单。
 						选项	--name-status 显示新增、修改、删除的文件清单。
 						选项	--abbrev-commit 仅显示 SHA-1 的前几个字符，而非所有的 40 个字符。
 						选项	--relative-date 使用较短的相对时间显示（比如，“2 weeks ago”）。
 						选项	--graph 显示 ASCII 图形表示的分支合并历史。
 						选项	--pretty 使用其他格式显示历史提交信息。可用的选项包括 oneline，short，full，fuller 和 format（后跟指定格式）。
-						选项 限制长度 -n 只显示最后n条提交记录 --since 从哪个时间开始  --util 直到哪个时间结束
-						选项 -(n) 仅显示最近的 n 条提交
-						选项--since, --after 仅显示指定时间之后的提交。
-						选项--until, --before 仅显示指定时间之前的提交。
-						选项--author 仅显示指定作者相关的提交。
-						选项--committer 仅显示指定提交者相关的提交。
-						选项--grep 仅显示含指定关键字的提交
-						选项 -S 仅显示添加或移除了某个关键字的提交
+						选项    限制长度 -n 只显示最后n条提交记录 --since 从哪个时间开始  --util 直到哪个时间结束
+						选项    -(n) 仅显示最近的 n 条提交
+						选项    --since, --after 仅显示指定时间之后的提交。
+						选项    --until, --before 仅显示指定时间之前的提交。
+						选项    --author 仅显示指定作者相关的提交。
+						选项    --committer 仅显示指定提交者相关的提交。
+						选项    --grep 仅显示含指定关键字的提交
+						选项    -S 仅显示添加或移除了某个关键字的提交
 		i.  git reset   HEAD <file>  将已暂存文件退回到未暂存状态 
 		j.  git checkout --file 撤销对本地文件的修改，退回到初始内容
+		k.	git remote 查看远程仓库
+						选项 -v 查看仓库简写和对应url
+						选项 add <shortname> <url> 添加新的远程仓库
+		l.	git fetch [remotename] 拉取远程仓库本地没有的文件
+		m.  git push [remote-name] [branch-name] 将本地仓库推送的服务器, 只有当你有所克隆服务器的写入权限，并且之前没有人推送过时，这条命令才能生效,如果有人已经推送过来必须先将他们的工作拉取下来并将其合并进你的工作后才能推送
+		n.  git remote show [remote-name]
+		o.  git remote rename [旧名称] [新名称]去修改一个远程仓库的简写名
