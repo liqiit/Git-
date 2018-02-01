@@ -63,4 +63,5 @@ Svn和Git的差别：
 		m.  git push [remote-name] [branch-name] 将本地仓库推送的服务器, 只有当你有所克隆服务器的写入权限，并且之前没有人推送过时，这条命令才能生效,如果有人已经推送过来必须先将他们的工作拉取下来并将其合并进你的工作后才能推送
 		n.  git remote show [remote-name]
 		o.  git remote rename [旧名称] [新名称]去修改一个远程仓库的简写名
-		p.  测试代码
+		p.  git tag 查看所有标签
+		q.  git tag [tagname] 新增轻量级标签  git tag [tagname] -a -m 'my version' 新增附注标签 git push [branchname] [tagname] 把标签共享  git push [branchname]--tags 把所有在远程仓库不存在的标签推送
