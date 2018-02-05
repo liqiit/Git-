@@ -65,3 +65,5 @@ Svn和Git的差别：
 		o.  git remote rename [旧名称] [新名称]去修改一个远程仓库的简写名
 		p.  git tag 查看所有标签
 		q.  git tag [tagname] 新增轻量级标签  git tag [tagname] -a -m 'my version' 新增附注标签 git push [branchname] [tagname] 把标签共享  git push [branchname]--tags 把所有在远程仓库不存在的标签推送
+		r.	git checkout -b [branch-name]新建分支并且换到新的分支
+		s.  git checkout
