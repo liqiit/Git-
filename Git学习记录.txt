@@ -68,3 +68,4 @@ Svn和Git的差别：
 		r.	git checkout -b [branch-name]新建分支并且换到新的分支
 		s.  git merge [branch-name]合并分支到当前分支
 		t.	git branch -d [branch-name]删除指定的分支
+		u.
