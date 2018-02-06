@@ -71,3 +71,4 @@ Svn和Git的差别：
 			--merged 查看已经合并的分支   --no-merged 查看尚未合并的分支   -D  强制删除某个分支
 		u.	git ls-remote 列出所有远程引用的完整列表
 		v.	git pull 拉取本地没有的文件并合并到本地分支
+		u.  git rebase 变基合并
