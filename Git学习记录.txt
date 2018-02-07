@@ -71,4 +71,16 @@ Svn和Git的差别：
 			--merged 查看已经合并的分支   --no-merged 查看尚未合并的分支   -D  强制删除某个分支
 		u.	git ls-remote 列出所有远程引用的完整列表
 		v.	git pull 拉取本地没有的文件并合并到本地分支
-		u.  git rebase 变基合并
+		w.  git rebase 变基合并
+ (9)Git 协议：（A）本地协议  命令：git clone /opt/git/project.git 或者git clone file:///opt/git/project.git  区别：file会触发网络传输资料的进程，传输速率较低，而另一种直接通过硬链接或者文件复制的方式进行传输
+				优点：简单 充分利用现有的文件权限和网络访问权限，缺点：配置复杂，不方便从多个位置访问
+			  （B）http协议 命令：git clone https://example.com/project.git 运行在标准的http/https端口上，可以利用所有http协议的验证方式
+				优点：不同的访问方式只需要一个url以及服务器只需要在需要授权时提示输入授权信息
+			  （C）ssh协议  命令：git clone ssh://user@server/project.git 或者git clone user@server/project.git
+				优点：配置简单，高效  缺点：无法进行匿名访问，不利于开源项目
+			   (D)Git协议   
+			   优点：git传输协议中速率最快，  缺点：没有授权机制
+（10）搭建Git服务
+	a、创建裸仓库  git clone --bare my_project my_project.git
+	b、推送裸仓库到服务器 scp -r my_project.git user@server:/opt/git/ 注：服务器上必须已经存在/opt/git/目录
+	c、客户端克隆仓库  git clone user@server:/opt/git/my_project.git
