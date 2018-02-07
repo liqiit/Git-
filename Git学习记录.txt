@@ -84,3 +84,7 @@ Svn和Git的差别：
 	a、创建裸仓库  git clone --bare my_project my_project.git
 	b、推送裸仓库到服务器 scp -r my_project.git user@server:/opt/git/ 注：服务器上必须已经存在/opt/git/目录
 	c、客户端克隆仓库  git clone user@server:/opt/git/my_project.git
+（11）Git仓库权限控制
+	a、在服务器通过adduser 创建多个账号
+	b、服务器创建git账户，然后每个拥有写权限的人发送一个公钥加入~/.ssh/authorized_keys文件中
+	c、通过第三方集中授权的方式进行管理
